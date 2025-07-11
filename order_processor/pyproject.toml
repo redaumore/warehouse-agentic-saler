@@ -1,0 +1,23 @@
+[project]
+name = "order_processor"
+version = "0.1.0"
+description = "order-processor using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.141.0,<1.0.0"
+]
+
+[project.scripts]
+order_processor = "order_processor.main:run"
+run_crew = "order_processor.main:run"
+train = "order_processor.main:train"
+replay = "order_processor.main:replay"
+test = "order_processor.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
