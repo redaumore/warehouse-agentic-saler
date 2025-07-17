@@ -1,17 +1,18 @@
-research_task:
+extract_items_from_image:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
-  expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    Read an image file from the folder `src/order_processor/input` and extract product information related to hardware or machine tools. 
+    The task involves identifying:
+    - Product names (handwritten or printed)
+    - Quantities requested
 
-reporting_task:
-  description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Focus on accurately interpreting both handwritten and printed text, leveraging the capabilities of Google Gemini 2.5 Flash to ensure high accuracy in extraction.
+
+  expected_input: >
+    An image file containing a customer order located in the folder `src/order_processor/input`.
+
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    A structured list of extracted items, including:
+    - Product name
+    - Quantity requested
+
+  agent: order_image_reader

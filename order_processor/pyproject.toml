@@ -1,11 +1,13 @@
 [project]
 name = "order_processor"
 version = "0.1.0"
-description = "order-processor using crewAI"
-authors = [{ name = "Your Name", email = "you@example.com" }]
-requires-python = ">=3.10,<3.14"
+description = "Order processor using crewAI"
+authors = [{ name = "Rolando", email = "redaumore@gmail.com" }]
+requires-python = ">=3.10,<3.13"
 dependencies = [
-    "crewai[tools]>=0.141.0,<1.0.0"
+    "crewai[tools]>=0.108.0,<1.0.0",
+    "google-genai",         # Para integración con Gemini
+    "requests"              # Útil para llamadas HTTP si las necesitas
 ]
 
 [project.scripts]

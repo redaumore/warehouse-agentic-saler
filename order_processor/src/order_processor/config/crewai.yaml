@@ -1,0 +1,6 @@
+model:
+  name: gemini/gemini-2.0-flash
+  api_key: ${GEMINI_API_KEY} # Usa la clave API definida en tu archivo .env
+  type: multimodal # Especifica que el modelo es multimodal
+  description: >
+    Google Gemini 2.5 Flash is a multimodal model capable of analyzing both text and images with high accuracy.
